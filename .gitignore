@@ -1,4 +1,7 @@
 
+### Java ###
+*.class
+
 ### IntelliJ IDEA ###
 .idea/
 *.iml
