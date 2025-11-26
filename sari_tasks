@@ -1,4 +1,5 @@
 [
-  {"id":2, "title":"Finish project report", "description":"Complete the final report for the Java project", "status":"IN_PROGRESS"},
-  {"id":3, "title":"Buy groceries", "description":"Milk, eggs, and bread", "status":"IN_PROGRESS"}
+  {"id":3, "title":"Go to the store", "description":"Buy a shirt", "status":"IN_PROGRESS"},
+  {"id":4, "title":"Buy groceries", "description":"Milk, eggs, and bread", "status":"NEW"},
+  {"id":5, "title":"Workout", "description":"Go for a 30-minute run", "status":"NEW"}
 ]

@@ -1,13 +1,18 @@
 
 public class Main {
     public static void main(String[] args) {
-        TaskRepository taskRepository = new TaskRepository("sari_tasks");
-        taskRepository.add(new Task(0, "Buy groceries", "Milk, eggs, and bread"));
-        Task task = taskRepository.getById(3);
+        TaskService taskService = new TaskService(new TaskRepository("sari_tasks"));
+        taskService.addTask("Workout", "Go for a 30-minute run");
+        Task task=taskService.getTaskById(3);
         System.out.println(task);
-        task.setStatus(TaskStatus.IN_PROGRESS);
-        taskRepository.update(task);
-        taskRepository.delete(1);
-        System.out.println(taskRepository.listAll());
+        task.setTitle("Go to the store");
+        task.setDescription("Buy a shirt");
+        taskService.updateTask(task);
+        taskService.markTaskDone(2);
+//        taskService.deleteTask(2);
+        System.out.println(taskService.getAllTasks());
+        System.out.println(taskService.getTasksSortedByStatus());
+        System.out.println(taskService.searchTasks("groceries"));
+
     }
 }
