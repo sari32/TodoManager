@@ -1,0 +1,4 @@
+[
+  {"id":2, "title":"Finish project report", "description":"Complete the final report for the Java project", "status":"IN_PROGRESS"},
+  {"id":3, "title":"Buy groceries", "description":"Milk, eggs, and bread", "status":"IN_PROGRESS"}
+]
