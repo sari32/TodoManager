@@ -1,8 +1,25 @@
-# Java Task Manager
+# Java Project – Task Manager, Algorithms & API Design
 
-## Description
-A simple task management system built in Java.  
-Provides basic CRUD functionality for tasks with a console-based user interface.
+## Overview
+This project is divided into three parts:
+
+1. **Task Manager (Java)** – A console-based system for managing tasks with CRUD operations.
+2. **Algorithms** – Processing arrays to find strictly increasing subarrays.
+3. **API & DTO Design** – Design of REST API and DTOs for library and order/payment systems.
+
+---
+
+## Part 1 – Task Manager
+
+### Description
+A simple task management system written in Java.  
+Tasks are stored in a JSON file, and users can interact via a console menu.
+
+### Main Classes
+- `Task` – Represents a task.
+- `TaskRepository` – Handles storage in JSON.
+- `TaskService` – Business logic like marking tasks as DONE, searching, and sorting.
+- `Main` – CLI for user interaction.
 
 ## Features
 - Add new tasks
@@ -17,18 +34,30 @@ Provides basic CRUD functionality for tasks with a console-based user interface.
 ## Installation
 1. Clone the repository.
 2. Open the project in your Java IDE (IntelliJ, Eclipse, etc.).
-3. Run the `Main` class to start the program.
+3. Run the `Main` class in part1 to start the program.
 
-## Usage
-- Follow the on-screen menu to interact with tasks.
-- Task data is stored in `tasks.json` in the project directory.
+---
 
-## Classes
-- `Task` – Represents a task entity.
-- `TaskRepository` – Manages tasks and handles file storage.
-- `TaskService` – Provides operations on tasks.
-- `Main` – CLI interface for the user.
+## Part 2 – Algorithms
 
-## Notes
-- Uses only standard Java (no external libraries).
-- JSON file is updated after every change.
+### Description
+Finds all strictly increasing subarrays in an integer array.
+
+### Main Class
+- `IncreasingSubarrays` – Implements the algorithm.
+
+### Usage
+1. Run the `Main` class in `part2/`.
+2. The program prints all strictly increasing subarrays.
+
+---
+
+## Part 3 – API & DTO Design
+
+### Description
+Design of REST API endpoints and DTOs for a library system and order/payment system.
+
+
+### Notes
+- DTOs represent the data structure for API communication.
+- Demonstrates separation of concerns: entities, storage, business logic, and API design.
