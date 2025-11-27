@@ -1,3 +1,8 @@
+package part1;
+
+import part1.Task;
+import part1.TaskStatus;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

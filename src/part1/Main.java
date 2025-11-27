@@ -1,3 +1,5 @@
+package part1;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -186,7 +188,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String filePath = "tasks.json";
+        String filePath = "data/tasks.json";
 
         TaskRepository repository = new TaskRepository(filePath);
         taskService = new TaskService(repository);
@@ -195,7 +197,7 @@ public class Main {
         System.out.println("     Welcome to Java Task Manager   ");
         System.out.println("=========================================");
 
-        //  Main Application Loop
+        //  part1.Main Application Loop
         boolean running = true;
         while (running) {
             printMenu();

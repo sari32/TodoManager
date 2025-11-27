@@ -1,10 +1,16 @@
+package part1;
+
+import part1.Task;
+import part1.TaskRepository;
+import part1.TaskStatus;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
  * Service layer responsible for business logic and data manipulation.
- * Acts as a bridge between the Controller/Main class and the TaskRepository.
+ * Acts as a bridge between the Controller/part1.Main class and the TaskRepository.
  */
 public class TaskService {
     private final TaskRepository taskRepository;

@@ -1,3 +1,7 @@
+package part1;
+
+import part1.TaskStatus;
+
 public class Task {
     private final int id;
     private String title;
