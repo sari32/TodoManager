@@ -29,14 +29,14 @@
 
 ## Endpoints – Loans
 
-| Method | Endpoint          | Description                       |
-|--------|-----------------|-----------------------------------|
-| GET    | /loans           | List all loans                    |
-| GET    | /loans/{id}      | Get loan by ID                    |
-| POST   | /loans           | Add a new loan                    |
-| PUT    | /loans/{id}      | Update loan details               |
-| DELETE | /loans/{id}      | Delete a loan                     |
+| Method | Endpoint             | Description                       |
+|--------|----------------------|-----------------------------------|
+| GET    | /loans               | List all loans                    |
+| GET    | /loans/{id}          | Get loan by ID                    |
+| POST   | /loans               | Add a new loan                    |
+| PUT    | /loans/{id}          | Update loan details               |
 | GET    | /loans/customer/{id} | List all loans for a specific customer |
+| POST   | /loans/return/{id}   | Return a loan (close the loan) |
 
 
 
@@ -48,7 +48,7 @@ public class BookDTO {
     private String title;       // required
     private String author;      // required
     private int yearPublished;  // optional
-    private boolean available;  // true = available for loan, false = borrowed
+    private boolean isAvailable;  // true = available for loan, false = borrowed
 }
 ```
 ## CustomerDTO
@@ -59,8 +59,18 @@ public class CustomerDTO {
     private String name;        // required      
     private String email;       // required
     private String phone;       // required
-    private String password;    // required
     private String address;     // optional
+}
+```
+
+## CustomerRegistrationDTO
+
+```java
+public class CustomerRegistrationDTO  {
+    private String name;        // required      
+    private String email;       // required
+    private String phone;       // required
+    private String password;    // required
 }
 ```
 
@@ -70,8 +80,8 @@ public class CustomerDTO {
 public class LoanDTO {
     private int id;             // required
     private int customerId;     // required
-    private Book[] books;       // required
-    private LocalDate Date;     // required
+    private int bookId;       // required
+    private LocalDate date;     // required
     private String status;      // required
 }
 ```
